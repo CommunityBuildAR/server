@@ -256,7 +256,7 @@ class RouteConfig {
 			foreach($actions as $action) {
 				$url = $config['url'];
 				$method = $action['name'];
-				$verb = strtoupper($ocsRoute['verb'] ?? 'GET');
+				$verb = strtoupper($action['verb'] ?? 'GET');
 				$collectionAction = $action['on-collection'] ?? false;
 				if (!$collectionAction) {
 					$url .= '/{id}';
