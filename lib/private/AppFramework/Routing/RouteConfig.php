@@ -91,7 +91,7 @@ class RouteConfig {
 		$this->router->useCollection($oldCollection);
 	}
 
-	private function processOCS(array $routes) {
+	private function processOCS(array $routes): void {
 		$ocsRoutes = $routes['ocs'] ?? [];
 		foreach ($ocsRoutes as $ocsRoute) {
 			$name = $ocsRoute['name'];
@@ -138,7 +138,7 @@ class RouteConfig {
 	 * @param array $routes
 	 * @throws \UnexpectedValueException
 	 */
-	private function processSimpleRoutes(array $routes) {
+	private function processSimpleRoutes(array $routes): void {
 		$simpleRoutes = $routes['routes'] ?? [];
 		foreach ($simpleRoutes as $simpleRoute) {
 			$name = $simpleRoute['name'];
@@ -188,7 +188,7 @@ class RouteConfig {
 	 *
 	 * @param array $routes
 	 */
-	private function processOCSResources(array $routes) {
+	private function processOCSResources(array $routes): void {
 		// declaration of all restful actions
 		$actions = [
 			['name' => 'index', 'verb' => 'GET', 'on-collection' => true],
@@ -239,7 +239,7 @@ class RouteConfig {
 	 *
 	 * @param array $routes
 	 */
-	private function processResources(array $routes) {
+	private function processResources(array $routes): void {
 		// declaration of all restful actions
 		$actions = [
 			['name' => 'index', 'verb' => 'GET', 'on-collection' => true],
