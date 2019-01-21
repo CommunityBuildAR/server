@@ -145,7 +145,7 @@ class RouteConfig {
 			$postfix = $simpleRoute['postfix'] ?? '';
 
 			$url = $simpleRoute['url'];
-			$verb = strtoupper($ocsRoute['verb'] ?? 'GET');
+			$verb = strtoupper($simpleRoute['verb'] ?? 'GET');
 
 			$split = explode('#', $name, 2);
 			if (count($split) !== 2) {
