@@ -158,7 +158,7 @@ interface IManager {
 	 * 
 	 * @return array
 	 * @since 6.0.0
-	 * @deprecated 16.0.0
+	 * @deprecated 16.0.0 - Use `$this->getUserAddressBooks()` instead
 	 */
 	public function getAddressBooks();
 
